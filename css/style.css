@@ -397,6 +397,12 @@ body {
 .icon-odnoklassniki:before {
   content: "\f263"; }
 
+.icon-angle-right:before {
+  content: "\f105"; }
+
+.icon-file-text-o:before {
+  content: "\f0f6"; }
+
 header {
   border-top: 4px solid #008ece; }
 
@@ -561,11 +567,9 @@ header {
         left: 100%;
         top: 0; }
   .main-navigation hr {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(72, 92, 121, 0.2)), color-stop(50%, #003666), color-stop(50%, rgba(72, 92, 121, 0.2)));
-    background-image: -webkit-linear-gradient(bottom, rgba(72, 92, 121, 0.2), #003666 50%, rgba(72, 92, 121, 0.2));
-    background-image: -moz-linear-gradient(bottom, rgba(72, 92, 121, 0.2), #003666 50%, rgba(72, 92, 121, 0.2));
-    background-image: -o-linear-gradient(bottom, rgba(72, 92, 121, 0.2), #003666 50%, rgba(72, 92, 121, 0.2));
-    background-image: linear-gradient(to top, rgba(72, 92, 121, 0.2), #003666 50%, rgba(72, 92, 121, 0.2));
+    background-image: url(../images/line_menu.png);
+    -o-background-size: cover;
+    background-size: cover;
     height: 2px;
     opacity: 0.5;
     position: absolute;
@@ -583,7 +587,8 @@ footer {
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    padding-bottom: 33px; }
   footer .widget.widgetheadings {
     width: 26.8%; }
   footer .widget.widgetpopular {
@@ -597,7 +602,7 @@ footer {
     margin-top: 44px; }
     footer .widget-content.popular-list-footer, footer .widget-content.records-fresh-list {
       border-left: 1px solid rgba(249, 250, 255, 0.1);
-      padding-left: 20px; }
+      padding-left: 18px; }
     footer .widget-content.headings-list-footer {
       padding-left: 28px; }
     footer .widget-content .wrapper-popular-list-item {
@@ -616,12 +621,35 @@ footer {
         column-width: 260px;
         height: 60px;
         overflow: hidden;
-        padding: 0px 65px 0 20px; }
+        margin: -3px 58px 0 20px;
+        cursor: pointer; }
     footer .widget-content .link-footer {
       display: block;
-      color: #ffffff;
-      padding: 0 0 15px 0px;
-      line-height: 1.29; }
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.29;
+      letter-spacing: 0.6px footer .widget-content .link-footer; }
+      footer .widget-content .link-footer :hover {
+        color: #ffffff; }
+      footer .widget-content .link-footer.heading-list-link {
+        padding: 0 0px 15px 0; }
+        footer .widget-content .link-footer.heading-list-link:hover:before, footer .widget-content .link-footer.heading-list-link:focus:before {
+          content: "\f105";
+          display: inline-block;
+          font: 16px "icomoon";
+          margin-right: 10px;
+          margin-top: -5px;
+          vertical-align: middle; }
+      footer .widget-content .link-footer.records-fresh-list-link {
+        border-bottom: 1px solid rgba(249, 250, 255, 0.1);
+        padding: 14px 0 11px 22px; }
+        footer .widget-content .link-footer.records-fresh-list-link:first-child {
+          padding-top: 0; }
+        footer .widget-content .link-footer.records-fresh-list-link:last-child {
+          border-bottom: 0; }
+        footer .widget-content .link-footer.records-fresh-list-link .icon-file-text-o {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 7px 0 -22px; }
   footer .widgettitle {
     display: block;
     font-family: PTSerif;
@@ -630,7 +658,7 @@ footer {
     letter-spacing: 0.7px;
     color: #ffffff;
     position: relative;
-    margin-top: 35px; }
+    margin-top: 38px; }
     footer .widgettitle:before {
       content: "";
       display: inline-block;
@@ -647,13 +675,36 @@ footer {
       width: 70px;
       border-bottom: 2px solid #f9faff;
       position: absolute;
-      bottom: -3px;
-      left: 40px; }
+      bottom: 0;
+      left: 44px; }
 
-.widget-area,
-.footer-bottom {
+.widget-area {
   width: 100%;
   max-width: 1060px;
   margin: 0 auto; }
+
+.footer-bottom {
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 14px 0; }
+  .footer-bottom .copyright, .footer-bottom .link-menu-footer {
+    width: 258px;
+    font: 14px "Open Sans";
+    letter-spacing: 0.6px;
+    line-height: 21px;
+    color: rgba(59, 92, 123, 0.8); }
+  .footer-bottom .link-menu-footer {
+    width: auto;
+    padding: 0px 0 0 12px; }
+    .footer-bottom .link-menu-footer:hover {
+      color: #008ece; }
 
 /*# sourceMappingURL=maps/style.css.map */

@@ -168,7 +168,8 @@ header { border-top: 4px solid #008ece;}
 
     hr {
 		
-		background-image: linear-gradient(to top, rgba(72, 92, 121, 0.2), #003666 50%, rgba(72, 92, 121, 0.2));
+		background-image: url(../images/line_menu.png);
+		background-size: cover;
 		height: 2px;
   		opacity: 0.5;
   		position: absolute;

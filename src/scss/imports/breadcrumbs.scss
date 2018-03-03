@@ -1,0 +1,42 @@
+@import 'imports/vars.scss';
+
+.breadcrumb  { 
+
+	display: flex;
+    font: 13px $font-sans;
+    color: #3b5c7b;
+    padding-top: 2px;
+
+    @media screen and (max-width: 768px) { padding-top: 20px; }
+  
+    .home:before {
+
+        content:"\f015";
+        display: inline-block;
+        font: 13px $icomoon;
+        color: $color;
+        vertical-align: middle;
+        margin-right: 5px;
+        padding-bottom: 1px;
+    }
+
+    a span { 
+
+    	color: $color;
+    	padding: 0 3px;
+
+        &:hover { text-decoration: underline; }
+    }
+    
+     a:after { 
+
+        content: "\f105";
+		display: inline-block;
+		font-family: $icomoon;
+		font-size: 12px;
+	  	color: $color;
+	  	padding: 0px 9px 0px;
+		vertical-align: middle;
+       
+    }     
+}

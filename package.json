@@ -1,5 +1,5 @@
 {
-  "name": "websm.io",
+  "name": "wer",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "developer@s2:websm.io"
+    "url": ""
   },
   "author": "",
   "license": "ISC",

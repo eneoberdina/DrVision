@@ -16,6 +16,7 @@ gulp.task('default', [
 gulp.task('watch', () => {
     gulp.watch('src/html/*.html', ['build-html']);
     gulp.watch('src/scss/*.scss', ['build-css']);
+    gulp.watch('src/images/*', ['build-images']);
    
 });
 

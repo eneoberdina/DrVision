@@ -10,15 +10,8 @@ footer {
 		display: flex;
 		padding-bottom: 33px;
 
-	}
+		.widget { min-width: 280px;}
 
-	.widget { 
-
-		&.widgetheadings { width: 26.8%; }
-
-		&.widgetpopular { width: 39.5%;}
-
-		&.widgetrecords { width: 34%; }
 	}
 
     .widget-content {
@@ -29,14 +22,25 @@ footer {
 		margin-top: 44px;
 
 		&.popular-list-footer,
-		&.records-fresh-list { 
-
-			border-left: 1px solid rgba(249, 250, 255, 0.1); 
-			padding-left: 18px;
-		}
+		&.records-fresh-list { border-left: 1px solid rgba(249, 250, 255, 0.1); }
 
 		&.headings-list-footer {
-			padding-left: 28px;
+
+			padding-left: 10px;
+			width: 250px;
+		}
+
+		&.popular-list-footer { 
+
+			padding-left: 20px;
+			width: 385px;
+    		margin-right: 40px;
+		}
+
+		&.records-fresh-list {
+			
+		    padding-left: 20px;
+		    width: 365px;
 		}
 
 		.wrapper-popular-list-item {
@@ -52,10 +56,10 @@ footer {
 
 			.popular-list-link {
 			    
+			    margin: 0px 28px 0 21px;
 			    column-width: 260px;
 			    height: 60px;
-			    overflow: hidden;
-			    margin: -3px 58px 0 20px;
+				overflow: hidden;
 			    cursor: pointer;	
 			}
 		}
@@ -69,8 +73,11 @@ footer {
 
 			&:hover { color: $color-white;}
 
-			&.heading-list-link { padding: 0 0px 15px 0;
+			&.heading-list-link {
 
+			 	padding-left: 19px;
+			 	padding-bottom: 15px;
+    			
 				&:hover, &:focus {
 
 					&:before {
@@ -88,7 +95,7 @@ footer {
 			&.records-fresh-list-link {
 				
 				border-bottom: 1px solid rgba(249, 250, 255, 0.1);
-			    padding: 14px 0 11px 22px;
+			    padding: 13px 0 12px 20px;
 
 			    &:first-child { padding-top: 0;}
 
@@ -113,7 +120,7 @@ footer {
 		letter-spacing: 0.7px;
 	    color:$color-white;
 	    position: relative;
-	    margin-top: 38px;
+	    margin-top: 36px;
 
 	    &:before {
 

@@ -1,0 +1,182 @@
+@import 'imports/vars.scss';
+
+aside.widget-area {
+   
+    width: 310px;
+    position: relative;
+
+    @media screen and (max-width: 1024px) { display: none; }
+
+	.widget {  background-color: rgba(182, 219, 255, 0.15); }
+
+    .margintop { margin-top: 30px; }
+
+    .margintop-down { margin-top: 26px; 
+
+    }
+
+    .widgettitle {
+   
+	    width: 100%;
+	    height: 50px;
+	    display: block;
+	    font: 18px/1.33 $font-serif;
+	    font-weight: bold;
+	    background-color: $color;
+	    color: $color-white;
+	    padding: 14px 21px;	    
+	    margin-top: 6px;
+
+	    &:after {
+
+	    	content: "";
+	    	display: inline-block;
+	    	width: 24px;
+			height: 24px;
+	    	background: url(../images/blueberries_white.png) no-repeat center;
+	    	background-size: cover;
+	    	vertical-align: middle;
+	    	float: right;
+	    }
+	}
+
+	.link-page { position: relative; }
+}
+
+.largepicture-block {
+
+    margin-bottom: 31px;
+    padding-bottom: 36px;
+   
+    .wrapper-block {
+    
+	    width: 230px;
+	    margin: 0 auto;
+	    padding-top: 38px;
+
+	    &:first-child { padding-top: 30px; }
+
+	    .largepicture {
+
+		    width: 100%;
+		    height: 128px;
+		}
+
+		.link-page {
+		   
+		    font: 14px/1.43 $font-serif;
+		    background-color: $color-white;
+		    color: $color2; 
+		    padding: 15px 20px;
+
+		    &:before {
+
+				content: "";
+				position: absolute;
+			    left: 20px;
+			    top: -19px; 
+			    border: 10px solid transparent; 
+			    border-bottom: 10px solid $color-white;
+		    } 
+
+
+		    &:hover { color: $color; }
+		}
+	}
+}
+
+.smallpicture-block {
+
+	.wrapper-block {
+
+		display: flex;
+		align-items: center;
+		position: relative;
+		border-bottom: 1px solid #fff;
+		margin: 16px 0 0 20px;
+    	padding-bottom: 22px;
+
+	    img {
+
+	    	width: 80px;
+		  	height: 60px;
+		  	align-self: flex-start;
+		 
+	    }
+
+	    .label {
+
+	    	position: absolute;
+	    	top: 0;
+	    	left: 0;
+	    	background-color: $color;
+		 	font: 14px/1.43 $font-serif;
+		    color: $color-white;
+		    padding: 0 6px;
+	    }
+	}
+
+	.link-page {
+
+	    font-family: PTSerif;
+	    font: 16px/1.38 $font-serif;
+	    color: rgba(59, 92, 123, 0.8);
+	    padding: 0px 20px;
+
+	    &:hover { color: rgb(59, 92, 123); }
+	}
+}
+
+.short-items { margin-bottom: 30px;
+
+	.row-item {
+
+	    border-bottom: 1px solid rgba(182, 219, 255, 0.15);
+	    margin: 16px 0 0 0;
+	    padding: 0 20px 25px;
+	}
+
+	.content-item {
+
+		display: block;
+	    font: 16px/1 $font-serif;
+	    color: $color2;
+	}
+
+	.wrapp-link {
+
+   		line-height: 10px;
+        padding-top: 6px;
+	}
+
+	.location, .link-item {
+	  
+	  display: inline-block;
+	  font: 14px/1.14 $font-serif;
+	  color: rgba(59, 92, 123, 0.7);
+	}
+
+	.location:after {
+
+		content: "\f105";
+		display: inline-block;
+		font-family: $icomoon;
+		font-size: 12px;
+	  	color: $color;
+	  	padding: 0px 3px 0px;
+		vertical-align: middle;
+	}
+
+	.link-item { display: inline;
+
+		&:hover { color: rgba(0, 142, 206, 0.7);}
+	}
+
+}
+.asadvert-aside {
+    
+    width: 100%;
+    height: 446px;
+
+   	img { margin: 0 auto;}
+}

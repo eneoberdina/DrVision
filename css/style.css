@@ -529,15 +529,15 @@ header {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 20px; }
-    .main-navigation ul.menu li.menu-item {
+    .main-navigation ul.menu .menu-item {
       -webkit-transition: all 0.3s;
       -o-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
       position: relative; }
-      .main-navigation ul.menu li.menu-item:hover > ul {
+      .main-navigation ul.menu .menu-item:hover > .sub-menu {
         display: block; }
-      .main-navigation ul.menu li.menu-item ul {
+      .main-navigation ul.menu .menu-item .sub-menu {
         display: none; }
     .main-navigation ul.menu a, .main-navigation ul.menu span {
       display: block;
@@ -547,23 +547,29 @@ header {
       padding: 46px 0 19px; }
       .main-navigation ul.menu a:hover, .main-navigation ul.menu span:hover {
         color: #008ece; }
-    .main-navigation ul.menu .current-menu-item {
+    .main-navigation ul.menu .current-menu-item:after {
+      content: "";
+      display: block;
       border-bottom: 4px solid #008ece; }
     .main-navigation ul.menu span {
       display: inline-block; }
-    .main-navigation ul.menu li ul {
+    .main-navigation ul.menu .menu-item .sub-menu {
+      display: none;
       min-width: 230px;
       position: absolute;
-      top: 100%;
       background-color: #fff;
+      -webkit-box-shadow: 0px 2px 5px 0 rgba(72, 92, 121, 0.2);
+      box-shadow: 0px 2px 5px 0 rgba(72, 92, 121, 0.2);
+      top: 100%;
       margin: 0;
+      padding: 24px 0 0;
       z-index: 2; }
-      .main-navigation ul.menu li ul li.menu-item a {
+      .main-navigation ul.menu .menu-item .sub-menu .menu-item a, .main-navigation ul.menu .menu-item .sub-menu span {
         text-transform: inherit;
-        padding: 10px; }
-      .main-navigation ul.menu li ul li.menu-item:hover a {
+        padding: 0px 19px 11px; }
+      .main-navigation ul.menu .menu-item .sub-menu .menu-item:hover a {
         color: #008ece; }
-      .main-navigation ul.menu li ul li ul {
+      .main-navigation ul.menu .menu-item .sub-menu li ul {
         left: 100%;
         top: 0; }
   .main-navigation hr {
@@ -575,7 +581,8 @@ header {
     position: absolute;
     right: 0;
     left: 0;
-    bottom: 0.5px; }
+    bottom: 0.5px;
+    z-index: -1; }
 
 .slicknav_btn.slicknav_collapsed {
   display: none; }
@@ -590,22 +597,25 @@ footer {
     display: -ms-flexbox;
     display: flex;
     padding-bottom: 33px; }
-  footer .widget.widgetheadings {
-    width: 26.8%; }
-  footer .widget.widgetpopular {
-    width: 39.5%; }
-  footer .widget.widgetrecords {
-    width: 34%; }
+    footer .widget-area .widget {
+      min-width: 280px; }
   footer .widget-content {
     font: 14px "PT Serif";
     line-height: 1.29;
     color: #ffffff;
     margin-top: 44px; }
     footer .widget-content.popular-list-footer, footer .widget-content.records-fresh-list {
-      border-left: 1px solid rgba(249, 250, 255, 0.1);
-      padding-left: 18px; }
+      border-left: 1px solid rgba(249, 250, 255, 0.1); }
     footer .widget-content.headings-list-footer {
-      padding-left: 28px; }
+      padding-left: 10px;
+      width: 250px; }
+    footer .widget-content.popular-list-footer {
+      padding-left: 20px;
+      width: 385px;
+      margin-right: 40px; }
+    footer .widget-content.records-fresh-list {
+      padding-left: 20px;
+      width: 365px; }
     footer .widget-content .wrapper-popular-list-item {
       display: -webkit-box;
       display: -webkit-flex;
@@ -617,12 +627,12 @@ footer {
         width: 70px;
         height: 70px; }
       footer .widget-content .wrapper-popular-list-item .popular-list-link {
+        margin: 0px 28px 0 21px;
         -webkit-column-width: 260px;
         -moz-column-width: 260px;
         column-width: 260px;
         height: 60px;
         overflow: hidden;
-        margin: -3px 58px 0 20px;
         cursor: pointer; }
     footer .widget-content .link-footer {
       display: block;
@@ -632,7 +642,8 @@ footer {
       footer .widget-content .link-footer:hover {
         color: #ffffff; }
       footer .widget-content .link-footer.heading-list-link {
-        padding: 0 0px 15px 0; }
+        padding-left: 19px;
+        padding-bottom: 15px; }
         footer .widget-content .link-footer.heading-list-link:hover:before, footer .widget-content .link-footer.heading-list-link:focus:before {
           content: "\f105";
           display: inline-block;
@@ -642,7 +653,7 @@ footer {
           vertical-align: middle; }
       footer .widget-content .link-footer.records-fresh-list-link {
         border-bottom: 1px solid rgba(249, 250, 255, 0.1);
-        padding: 14px 0 11px 22px; }
+        padding: 13px 0 12px 20px; }
         footer .widget-content .link-footer.records-fresh-list-link:first-child {
           padding-top: 0; }
         footer .widget-content .link-footer.records-fresh-list-link:last-child {
@@ -659,7 +670,7 @@ footer {
     letter-spacing: 0.7px;
     color: #ffffff;
     position: relative;
-    margin-top: 38px; }
+    margin-top: 36px; }
     footer .widgettitle:before {
       content: "";
       display: inline-block;

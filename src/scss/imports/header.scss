@@ -114,14 +114,14 @@ header { border-top: 4px solid #008ece;}
     	justify-content: space-between;
    	    padding: 0 20px;
 
-        li.menu-item  { 
+        .menu-item  { 
 
             transition:  all 0.3s;
             position: relative;
 
-            &:hover > ul { display: block; }
+            &:hover > .sub-menu { display: block; }
 
-            ul { display: none; }
+            .sub-menu { display: none; }
            
         }
 
@@ -137,29 +137,38 @@ header { border-top: 4px solid #008ece;}
 
         }
 
-        .current-menu-item { border-bottom: 4px solid #008ece;}
+        .current-menu-item:after { 
+
+            content: "";
+            display: block;
+            border-bottom: 4px solid #008ece;
+        }
 
         span {display: inline-block; }
 
-        li ul {
+
+       .menu-item .sub-menu  {
         
+            display: none;
             min-width: 230px;
             position: absolute;
-            top: 100%;
             background-color: #fff;
+            box-shadow: 0px 2px 5px 0 rgba(72, 92, 121, 0.2);
+            top: 100%;
             margin: 0;
+            padding: 24px 0 0;
             z-index: 2;
 
-            li.menu-item a {
+            .menu-item a, span {
 
 				text-transform: inherit;
-            	padding: 10px;
+            	padding: 0px 19px 11px;     
             }
 
-            li.menu-item:hover a { color: #008ece; }
+            .menu-item:hover a { color: #008ece; }
 
             li ul { 
-                
+
                 left: 100%;
                 top: 0;     
             }
@@ -176,6 +185,7 @@ header { border-top: 4px solid #008ece;}
 		right: 0;
 		left: 0;
 		bottom: 0.5px;
+        z-index: -1;
     }
 }
 

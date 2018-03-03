@@ -1,6 +1,9 @@
 @import 'imports/vars.scss';
 
-footer { background-color: #008ece; 
+footer { 
+
+	background-color: #008ece; 
+	margin-top: 42px;
 
 	.widget-area { 
 
@@ -62,7 +65,7 @@ footer { background-color: #008ece;
 			display: block;
 			color: rgba(255, 255, 255, 0.8);
 			line-height: 1.29;
-			letter-spacing: 0.6px
+			letter-spacing: 0.6px;
 
 			&:hover { color: $color-white;}
 
@@ -160,6 +163,8 @@ footer { background-color: #008ece;
 	    line-height: 21px;
 	    color: rgba(59, 92, 123, 0.8);
 	}
+
+	.menu-list-horizontal { display: flex; }
 
 	.link-menu-footer { 
 

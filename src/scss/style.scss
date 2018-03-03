@@ -2,4 +2,42 @@
 @import 'imports/vars.scss';
 @import 'imports/header.scss';
 @import 'imports/footer.scss';
+@import 'imports/sidebar.scss';
+@import 'imports/breadcrumbs.scss';
+
+body { 
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+
+ display: block;
+ cursor: pointer;
+
+}
+
+img {
+
+	display: block;
+}
+
+.site-content { 
+
+	display: flex;
+	width: 100%;
+	max-width: 1060px;
+	margin: 0 auto; 
+}
+
+.main-content {
+    
+    flex-basis: calc(100% - 310px);
+    flex-grow: 1;
+}
+
+
+
 

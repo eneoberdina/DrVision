@@ -4,10 +4,10 @@ header { border-top: 4px solid #008ece;}
 
 .top-header,
 .main-navigation {
-
-	width: 100%;
-	max-width:1060px;
-	margin: 0 auto;
+    
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto; 
 }
 
 .top-header { 
@@ -131,7 +131,7 @@ header { border-top: 4px solid #008ece;}
             font: 14px $font-sans;
             color: rgba(72, 92, 121, 0.8);
             text-transform: uppercase;
-            padding: 43px 0 18px;
+            padding: 46px 0 19px;
 
             &:hover  { color: #008ece; }
 

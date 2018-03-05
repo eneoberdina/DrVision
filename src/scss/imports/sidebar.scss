@@ -7,13 +7,13 @@ aside.widget-area {
 
     @media screen and (max-width: 1024px) { display: none; }
 
-	.widget {  background-color: rgba(182, 219, 255, 0.15); }
+    img { display: block;}
 
-    .margintop { margin-top: 30px; }
+	.widget { 
 
-    .margintop-down { margin-top: 26px; 
-
-    }
+	 background-color: rgba(182, 219, 255, 0.15); 
+	 margin: 28px 0;
+	}
 
     .widgettitle {
    
@@ -24,8 +24,7 @@ aside.widget-area {
 	    font-weight: bold;
 	    background-color: $color;
 	    color: $color-white;
-	    padding: 14px 21px;	    
-	    margin-top: 6px;
+	    padding: 12px 21px;	    
 
 	    &:after {
 
@@ -93,8 +92,8 @@ aside.widget-area {
 		align-items: center;
 		position: relative;
 		border-bottom: 1px solid #fff;
-		margin: 16px 0 0 20px;
-    	padding-bottom: 22px;
+		margin: 25px 0 0 20px;
+    	padding-bottom: 16px;
 
 	    img {
 
@@ -118,10 +117,12 @@ aside.widget-area {
 
 	.link-page {
 
-	    font-family: PTSerif;
-	    font: 16px/1.38 $font-serif;
+	    font: 16px/1.28 $font-serif;
 	    color: rgba(59, 92, 123, 0.8);
-	    padding: 0px 20px;
+	    margin: 0px 20px;
+	    column-width: 210px;
+		height: 65px;
+		overflow: hidden;
 
 	    &:hover { color: rgb(59, 92, 123); }
 	}
@@ -132,8 +133,7 @@ aside.widget-area {
 	.row-item {
 
 	    border-bottom: 1px solid rgba(182, 219, 255, 0.15);
-	    margin: 16px 0 0 0;
-	    padding: 0 20px 25px;
+	    padding: 16px 20px 16px;
 	}
 
 	.content-item {
@@ -141,6 +141,9 @@ aside.widget-area {
 		display: block;
 	    font: 16px/1 $font-serif;
 	    color: $color2;
+	    column-width: 210px;
+		height: 50px;
+		overflow: hidden;
 	}
 
 	.wrapp-link {

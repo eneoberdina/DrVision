@@ -4,12 +4,15 @@
 @import 'imports/footer.scss';
 @import 'imports/sidebar.scss';
 @import 'imports/breadcrumbs.scss';
+@import 'imports/wrapper-content.scss';
 
 body { 
 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font: 16px $font-sans;
+    color: $color2;
 }
 
 a {
@@ -21,8 +24,51 @@ a {
 
 img {
 
-	display: block;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    vertical-align: baseline;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family:  $font-serif;
+    line-height: 1.38;
+    color: #003666;
+    padding: 9px 0 20px;
+    margin: 0px 0 8px;
+    position: relative;
+
+    &:before {
+
+        content: "";
+        width: 70px;
+        border-bottom: 4px solid $color;
+        position: absolute;
+        bottom: 0;
+    }
+
+}
+
+h1 { 
+
+	font-size: 32px;
+    padding: 25px 0 23px;
+    margin: 0 0 40px;
+}
+
+h2 { font-size: 24px; }
+
+h3 { font-size: 20px; }
+
+h4 { font-size: 18px; }
+
+h5, h6 { font-size: 16px; }
 
 .site-content { 
 
@@ -36,6 +82,7 @@ img {
     
     flex-basis: calc(100% - 310px);
     flex-grow: 1;
+    padding-top: 27px; 
 }
 
 

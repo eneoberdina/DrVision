@@ -1,0 +1,49 @@
+@import 'imports/vars.scss';
+
+figure {text-align: center; }
+
+figcaption { 
+
+  	font: 14px $font-serif;
+ 	font-style: italic;
+ 	color: rgba(59, 92, 123, 0.8);
+ 	line-height: 2;
+  	padding: 10px 0; 
+  	max-width: 250px;
+  	margin: 0 auto;
+}
+
+.aligncenter  { 
+
+    display: block;
+    margin: 10px auto; 
+    text-align: center; 
+
+    figcaption { max-width: auto; }
+}
+ 
+.alignright { 
+
+    float: right; 
+    margin: 10px 0 10px 20px;
+
+    @media screen and (max-width: 768px) { 
+
+        display: block;
+        float: none;
+        margin: 10px auto;
+    }
+}
+
+.alignleft { 
+
+    float: left;
+    margin: 10px 20px 10px 0; 
+
+    @media screen and (max-width: 768px) { 
+
+        display: block;
+        float: none;
+        margin: 10px auto;;
+    }
+}

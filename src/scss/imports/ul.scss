@@ -1,0 +1,66 @@
+@import 'imports/vars.scss';
+.wrapper-content { 
+
+	ul { padding-left: 46px;}
+
+	ul  li { 
+
+		font: 16px/1.75 $font-sans;
+		color: $color2;
+	    line-height: 1.75;
+	    padding: 5px 0;
+
+	    &:before {
+	        
+	        content: "\f105";
+	      	font: 16px $icomoon;
+	       	color: $color;
+	        margin-right: 15px;
+	        margin-left: -25px;
+	    }
+	}
+
+	ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; 
+
+	    @media screen and (max-width: 768px) { margin: 10px auto 10px 0; } 
+
+	} 
+
+	ol { counter-reset: list1; 
+
+	    li  { 
+
+	    	padding: 7px 17px 4px;
+	    	line-height: 1.25; 
+
+	        @media screen and (max-width: 641px) { padding: 8px 0; }
+	    }
+
+	    li:before {
+	        content: counter(list1) ".";
+	        counter-increment: list1;
+	        margin-right: 14px;
+	        font:16px/1.5 $font-serif;
+	        color: $color;
+	        font-weight: bold;
+	    }
+
+	    li ol { 
+
+	        width: 100%;
+	        padding-left: 44px;
+	        box-sizing: border-box;
+	    }
+	    
+	    li ol > li:before {
+	       content: "\f105";
+			display: inline-block;
+			font-family:$icomoon;
+			color: $color;
+	        margin-left: -30px;
+	        font-weight: normal;
+	       
+	    }
+	}
+
+}

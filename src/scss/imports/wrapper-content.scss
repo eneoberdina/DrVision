@@ -26,6 +26,47 @@
 	  font: 16px/1.75 $font-sans;
 	  color: $color2; 
 	}
+
+	.similar-articles {
+
+	    background-color: rgba(182, 219, 255, 0.15);
+	    margin: 20px 0;
+	    padding: 20px 20px 20px 0;
+
+	    .widgettitle {
+
+		    min-height: 50px;
+		    background-color: $color;
+		    color: $color-white;   
+
+		    &:after { content: ""; }
+	}
+
+    .smallpicture-block .wrapper-block {
+    	
+    	flex-basis: calc(100%/2 - 20px);
+    	border-bottom: 0;
+    	align-items: self-start;
+    	margin: 20px 0 0 20px;
+    	padding-bottom: 0px;
+
+	    	img { 
+
+		    	width: 70px;
+		 		height: 70px;
+			}
+
+			.link-page {
+				  
+				font-size: 14px;
+	 			max-height: 73px;
+	 			color: rgba(59, 92, 123, 0.8);
+	 			text-decoration: none;
+
+	 			&:hover { color: $color2; }
+			}
+    	}
+	}
 }
 
 .table-block {
@@ -80,9 +121,9 @@
 
 		content: "";
         width: 140px;
-        height: 138px;
-        background: url(/images/bv_osnovnoi_mobile.png) no-repeat top;
-        transform: rotate(270deg);
+        height: 140px;
+        background: url(/images/bv_osnovnoi.png) no-repeat top;
+        background-size: cover;
 
         @media screen and (max-width: 1023px) { 
 
@@ -95,9 +136,7 @@
 
     &.red {  border: solid 1px rgba(255, 54, 54, 0.15);
 		
-		&:before { background: url(/images/bv_vajno.png) no-repeat top; 
-		transform: inherit;
-	}
+		&:before { background: url(/images/bv_vajno.png) no-repeat top; }
 	}
 
    .vnimanie-block {

@@ -13,169 +13,93 @@ aside.widget-area {
 
 	 background-color: rgba(182, 219, 255, 0.15); 
 	 margin: 28px 0;
+	 
 	}
 
-    .widgettitle {
-   
-	    width: 100%;
-	    height: 50px;
-	    display: block;
-	    font: 18px/1.33 $font-serif;
-	    font-weight: bold;
-	    background-color: $color;
-	    color: $color-white;
-	    padding: 12px 21px;	    
+	.largepicture-block {
+	   
+	    .wrapper-block {
+	    
+		    width: 230px;
+		    padding-top: 38px;
 
-	    &:after {
+		    &:first-child { padding-top: 30px; }
 
-	    	content: "";
-	    	display: inline-block;
-	    	width: 24px;
-			height: 24px;
-	    	background: url(../images/blueberries_white.png) no-repeat center;
-	    	background-size: cover;
-	    	vertical-align: middle;
-	    	float: right;
-	    }
-	}
+		    .largepicture { height: 128px; }
 
-	.link-page { position: relative; }
-}
+			.link-page {
+			   
+			    line-height: 1.43;
+			    background-color: $color-white;
+				border: 0;
+			    color: $color2; 
+			    padding: 15px 20px;
 
-.largepicture-block {
+			    &:before {
 
-    margin-bottom: 31px;
-    padding-bottom: 36px;
-   
-    .wrapper-block {
-    
-	    width: 230px;
-	    margin: 0 auto;
-	    padding-top: 38px;
+					content: "";
+				    left: 20px;
+				    top: -19px; 
+				    border: 10px solid transparent; 
+				    border-bottom: 10px solid $color-white;
+			    } 
 
-	    &:first-child { padding-top: 30px; }
-
-	    .largepicture {
-
-		    width: 100%;
-		    height: 128px;
-		}
-
-		.link-page {
-		   
-		    font: 14px/1.43 $font-serif;
-		    background-color: $color-white;
-		    color: $color2; 
-		    padding: 15px 20px;
-
-		    &:before {
-
-				content: "";
-				position: absolute;
-			    left: 20px;
-			    top: -19px; 
-			    border: 10px solid transparent; 
-			    border-bottom: 10px solid $color-white;
-		    } 
-
-
-		    &:hover { color: $color; }
+			    &:hover { color: $color; }
+			}
 		}
 	}
-}
 
-.smallpicture-block {
+	.short-items { margin-bottom: 30px;
 
-	.wrapper-block {
+		.row-item {
 
-		display: flex;
-		align-items: center;
-		position: relative;
-		border-bottom: 1px solid #fff;
-		margin: 25px 0 0 20px;
-    	padding-bottom: 16px;
+		    border-bottom: 1px solid rgba(182, 219, 255, 0.15);
+		    padding: 20px 20px 16px;
+		}
 
-	    img {
+		.content-item {
 
-	    	width: 80px;
-		  	height: 60px;
-		  	align-self: flex-start;
-		 
-	    }
+			display: block;
+		    font: 16px/1 $font-serif;
+		    color: $color2;
+		    column-width: 210px;
+			max-height: 50px;
+			overflow: hidden;
+		}
 
-	    .label {
+		.wrapp-link {
 
-	    	position: absolute;
-	    	top: 0;
-	    	left: 0;
-	    	background-color: $color;
-		 	font: 14px/1.43 $font-serif;
-		    color: $color-white;
-		    padding: 0 6px;
-	    }
-	}
+	   		line-height: 10px;
+	        padding-top: 4px;
+		}
 
-	.link-page {
+		.location, .link-item {
+		  
+		  display: inline-block;
+		  font: 14px/1.14 $font-serif;
+		  color: rgba(59, 92, 123, 0.7);
+		}
 
-	    font: 16px/1.28 $font-serif;
-	    color: rgba(59, 92, 123, 0.8);
-	    margin: 0px 20px;
-	    column-width: 210px;
-		height: 65px;
-		overflow: hidden;
+		.location:after {
 
-	    &:hover { color: rgb(59, 92, 123); }
-	}
-}
+			content: "\f105";
+			display: inline-block;
+			font-family: $icomoon;
+			font-size: 12px;
+		  	color: $color;
+		  	padding: 0px 4px 0px;
+			vertical-align: middle;
+		}
 
-.short-items { margin-bottom: 30px;
+		.link-item { display: inline;
 
-	.row-item {
+			&:hover { color: rgba(0, 142, 206, 0.7);}
+		}
 
-	    border-bottom: 1px solid rgba(182, 219, 255, 0.15);
-	    padding: 16px 20px 16px;
-	}
-
-	.content-item {
-
-		display: block;
-	    font: 16px/1 $font-serif;
-	    color: $color2;
-	    column-width: 210px;
-		height: 50px;
-		overflow: hidden;
-	}
-
-	.wrapp-link {
-
-   		line-height: 10px;
-        padding-top: 6px;
-	}
-
-	.location, .link-item {
-	  
-	  display: inline-block;
-	  font: 14px/1.14 $font-serif;
-	  color: rgba(59, 92, 123, 0.7);
-	}
-
-	.location:after {
-
-		content: "\f105";
-		display: inline-block;
-		font-family: $icomoon;
-		font-size: 12px;
-	  	color: $color;
-	  	padding: 0px 3px 0px;
-		vertical-align: middle;
-	}
-
-	.link-item { display: inline;
-
-		&:hover { color: rgba(0, 142, 206, 0.7);}
 	}
 
 }
+
 .asadvert-aside {
     
     width: 100%;

@@ -1,6 +1,6 @@
 @import 'imports/vars.scss';
 
-aside.widget-area {
+.widget-area.small-area {
    
     width: 310px;
     position: relative;
@@ -25,7 +25,7 @@ aside.widget-area {
 
 		    &:first-child { padding-top: 30px; }
 
-		    .largepicture { height: 128px; }
+		   img { height: 128px; }
 
 			.link-page {
 			   
@@ -48,56 +48,6 @@ aside.widget-area {
 			}
 		}
 	}
-
-	.short-items { margin-bottom: 30px;
-
-		.row-item {
-
-		    border-bottom: 1px solid rgba(182, 219, 255, 0.15);
-		    padding: 20px 20px 16px;
-		}
-
-		.content-item {
-
-			display: block;
-		    font: 16px/1 $font-serif;
-		    color: $color2;
-		    column-width: 210px;
-			max-height: 50px;
-			overflow: hidden;
-		}
-
-		.wrapp-link {
-
-	   		line-height: 10px;
-	        padding-top: 4px;
-		}
-
-		.location, .link-item {
-		  
-		  display: inline-block;
-		  font: 14px/1.14 $font-serif;
-		  color: rgba(59, 92, 123, 0.7);
-		}
-
-		.location:after {
-
-			content: "\f105";
-			display: inline-block;
-			font-family: $icomoon;
-			font-size: 12px;
-		  	color: $color;
-		  	padding: 0px 4px 0px;
-			vertical-align: middle;
-		}
-
-		.link-item { display: inline;
-
-			&:hover { color: rgba(0, 142, 206, 0.7);}
-		}
-
-	}
-
 }
 
 .asadvert-aside {
@@ -106,4 +56,19 @@ aside.widget-area {
     height: 446px;
 
    	img { margin: 0 auto;}
+}
+
+.top-buttom {
+    
+    background: url(/images/up.svg) no-repeat center;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: -80px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 10;
+
+    &:hover { opacity: 0.8;}
 }

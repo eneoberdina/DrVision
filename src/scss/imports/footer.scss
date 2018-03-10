@@ -2,113 +2,129 @@
 
 footer { 
 
-	background-color: #008ece; 
-	margin-top: 42px;
+	background-color: $color; 
+	margin-top: 30px;
 
-	.widget-area { 
+	.footer { 
 
 		display: flex;
 		padding-bottom: 33px;
 
-		.widget { min-width: 280px;}
+		.widget { min-width: 280px;
 
-	}
+			.widgettitle {
 
-    .widget-content {
+				margin-top: 38px;
+	            padding: 0;
 
-		font: 14px $font-serif;
-		line-height: 1.29;
-		color: $color-white;
-		margin-top: 44px;
+	            &:after {
 
-		&.popular-list-footer,
-		&.records-fresh-list { border-left: 1px solid rgba(249, 250, 255, 0.1); }
+	            	bottom: 15px;
+	                left: 45px;
+	            }
 
-		&.headings-list-footer {
+	            &:before { margin-right: 15px; }
 
-			padding-left: 10px;
-			width: 250px;
-		}
-
-		&.popular-list-footer { 
-
-			padding-left: 20px;
-			width: 385px;
-    		margin-right: 40px;
-		}
-
-		&.records-fresh-list {
-			
-		    padding-left: 20px;
-		    width: 365px;
-		}
-
-		.wrapper-popular-list-item {
-		    
-		    display: flex;
-		    margin-bottom: 11px;
-
-			.popular-list-picture {
-			    
-			    width: 70px;
-			    height: 70px;
-			}
-
-			.popular-list-link {
-			    
-			    margin: 0px 28px 0 21px;
-			    column-width: 260px;
-			    max-height: 60px;
-				overflow: hidden;
-			    cursor: pointer;	
 			}
 		}
 
-		.link-footer { 
+	    .widget-content {
 
-			display: block;
-			color: rgba(255, 255, 255, 0.8);
+			font: 14px $font-serif;
 			line-height: 1.29;
-			letter-spacing: 0.6px;
+			color: $color-white;
+			margin-top: 25px;
 
-			&:hover { color: $color-white;}
+			&.popular-list-footer,
+			&.records-fresh-list { border-left: 1px solid rgba(249, 250, 255, 0.1); }
 
-			&.heading-list-link {
+			&.headings-list-footer {
 
-			 	padding-left: 19px;
-			 	padding-bottom: 15px;
-    			
-				&:hover, &:focus {
+				padding-left: 10px;
+				width: 250px;
+			}
 
-					&:before {
+			&.popular-list-footer { 
 
-						content: "\f105";
-						display: inline-block;
-						font: 16px $icomoon;
-						margin-right: 10px;
-						margin-top: -5px;
-						vertical-align: middle
-					}
+				padding-left: 20px;
+				width: 385px;
+	    		margin-right: 40px;
+			}
+
+			&.records-fresh-list {
+				
+			    padding-left: 20px;
+			    width: 365px;
+			}
+
+			.wrapper-popular-list-item {
+			    
+			    display: flex;
+			    margin-bottom: 11px;
+
+				.popular-list-picture {
+				    
+				    width: 70px;
+				    height: 70px;
+				}
+
+				.popular-list-link {
+				    
+				    margin: 0px 28px 0 21px;
+				    column-width: 260px;
+				    max-height: 60px;
+					overflow: hidden;
+				    cursor: pointer;	
 				}
 			}
 
-			&.records-fresh-list-link {
-				
-				border-bottom: 1px solid rgba(249, 250, 255, 0.1);
-			    padding: 13px 0 12px 20px;
+			.link-footer { 
 
-			    &:first-child { padding-top: 0;}
+				display: block;
+				color: rgba(255, 255, 255, 0.8);
+				line-height: 1.29;
+				letter-spacing: 0.6px;
 
-			    &:last-child { border-bottom: 0;}
+				&:hover { color: $color-white;}
 
-    			.icon-file-text-o { 
+				&.heading-list-link {
 
-					display: inline-block;
-					vertical-align: middle;
-    				margin: 0 7px 0 -22px;
-    			}
+				 	padding-left: 19px;
+				 	padding-bottom: 15px;
+	    			
+					&:hover, &:focus {
+
+						&:before {
+
+							content: "\f105";
+							display: inline-block;
+							font: 16px $icomoon;
+							margin-right: 10px;
+							margin-top: -5px;
+							vertical-align: middle
+						}
+					}
+				}
+
+				&.records-fresh-list-link {
+					
+					border-bottom: 1px solid rgba(249, 250, 255, 0.1);
+				    padding: 13px 0 12px 20px;
+
+				    &:first-child { padding-top: 0;}
+
+				    &:last-child { border-bottom: 0;}
+
+	    			.icon-file-text-o { 
+
+						display: inline-block;
+						vertical-align: middle;
+	    				margin: 0 7px 0 -22px;
+	    			}
+				}
 			}
 		}
+
 	}
 
 	.widgettitle {
@@ -148,7 +164,7 @@ footer {
 	}
 }
 
-.widget-area {
+.footer {
 
     width: 100%;
     max-width: 1060px;
@@ -161,7 +177,7 @@ footer {
     background-color: #fff;
     display: flex;
    	justify-content: space-around;
-	padding: 14px 0;
+	padding: 16px 0;
 
     .copyright, .link-menu-footer {
 

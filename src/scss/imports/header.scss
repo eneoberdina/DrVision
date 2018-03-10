@@ -1,6 +1,6 @@
 @import 'imports/vars.scss';
 
-header { border-top: 4px solid #008ece;}
+header { border-top: 4px solid $color;}
 
 .top-header,
 .main-navigation {
@@ -34,7 +34,6 @@ header { border-top: 4px solid #008ece;}
 	.soclink {
 
 	    width: 40px;
-	    height: 40px;
 	    color: rgba(59, 92, 123, 0.5);
 	    border: 1px solid rgba(59, 92, 123, 0.1);
 	    border-right: 0;
@@ -119,6 +118,17 @@ header { border-top: 4px solid #008ece;}
             transition:  all 0.3s;
             position: relative;
 
+            &:after { 
+
+            content: "";
+            width: 100%;
+            border-bottom: 4px solid transparent;
+            position: absolute;
+            bottom: 4px;
+            z-index: 10;
+            width: 100%;
+        }
+
             &:hover > .sub-menu { display: block; }
 
             .sub-menu { display: none; }
@@ -131,22 +141,14 @@ header { border-top: 4px solid #008ece;}
             font: 14px $font-sans;
             color: rgba(72, 92, 121, 0.8);
             text-transform: uppercase;
-            padding: 46px 0 19px;
+            padding: 46px 0 22px;
 
-            &:hover  { color: #008ece; }
+            &:hover  { color: $color; }
 
         }
 
-        .current-menu-item:after { 
-
-            content: "";
-            display: block;
-            border-bottom: 4px solid #008ece;
-        }
-
-        span {display: inline-block; }
-
-
+        .current-menu-item:after { border-bottom: 4px solid $color; }
+        
        .menu-item .sub-menu  {
         
             display: none;
@@ -156,7 +158,6 @@ header { border-top: 4px solid #008ece;}
             box-shadow: 0px 2px 5px 0 rgba(72, 92, 121, 0.2);
             top: 100%;
             margin: 0;
-            padding: 24px 0 0;
             z-index: 2;
 
             .menu-item a, span {
@@ -165,7 +166,7 @@ header { border-top: 4px solid #008ece;}
             	padding: 0px 19px 11px;     
             }
 
-            .menu-item:hover a { color: #008ece; }
+            .menu-item:hover a { color: $color; }
 
             li ul { 
 
@@ -184,7 +185,7 @@ header { border-top: 4px solid #008ece;}
   		position: absolute;
 		right: 0;
 		left: 0;
-		bottom: 0.5px;
+		bottom: 3px;
         z-index: -1;
     }
 }
